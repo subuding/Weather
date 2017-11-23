@@ -204,4 +204,7 @@ public class MainActivity extends AppCompatActivity {
         weatherAdapter.notifyDataSetChanged();
     }
 
+    public void getdata(){
+
+}
 }

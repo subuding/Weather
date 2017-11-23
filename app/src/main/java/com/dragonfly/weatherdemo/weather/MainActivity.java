@@ -203,8 +203,4 @@ public class MainActivity extends AppCompatActivity {
         Utils.setListViewHeightBasedOnChildren(list);//重新计算list view的高度（滑动布局嵌套滑动布局）
         weatherAdapter.notifyDataSetChanged();
     }
-
-    public void getdata(){
-
-}
 }

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "395052941369",
+    "firebase_url": "https://weather-9de11.firebaseio.com",
+    "project_id": "weather-9de11",
+    "storage_bucket": "weather-9de11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395052941369:android:5677b8ee7a685156",
+        "android_client_info": {
+          "package_name": "com.dragonfly.weatherdemo.weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395052941369-kf55va3d7vubrg07vui416toh4hrjvhg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGHHN0PUwRG6V_RD8Zn6kT-Y4EtbeSrYk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

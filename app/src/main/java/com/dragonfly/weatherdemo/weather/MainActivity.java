@@ -79,21 +79,22 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 1:
                     String string = bundle.getString("weather");
-                    Utils.savaData(MainActivity.this,string,"data");
+                    Utils.savaData(MainActivity.this, string, "data");
                     setData(string);
                     break;
             }
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         gson = new Gson();
-        String data= Utils.getData(this,"data");
-        Log.i("1234567890", "onCreate: "+data);
-        if(data!=null){
+        String data = Utils.getData(this, "data");
+        Log.i("1234567890", "onCreate: " + data);
+        if (data != null) {
             setData(data);
         }
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -195,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
             location();
         }
     }
+
     //为view设置数据
     private void setData(String data) {
         Weather weather = gson.fromJson(data, Weather.class);

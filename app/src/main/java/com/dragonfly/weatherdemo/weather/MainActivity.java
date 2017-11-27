@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
     String latLongString;
     @BindView(R.id.recyclerview)
     RecyclerView recyclerview;
-
     private LocationManager locationManager;
     @BindView(R.id.adView)
     NativeExpressAdView adView;
@@ -85,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
-
     };
 
     @Override

@@ -22,7 +22,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.dragonfly.weatherdemo.weather.adapter.HoursAdapter;
 import com.dragonfly.weatherdemo.weather.adapter.WeatherAdapter;
 import com.dragonfly.weatherdemo.weather.bean.Weather;
@@ -32,19 +31,11 @@ import com.dragonfly.weatherdemo.weather.util.Utils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.NativeExpressAdView;
-import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

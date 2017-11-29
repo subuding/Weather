@@ -159,21 +159,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //获取城市woeid
-    public void getWoeid(final String s) {
+    public void getWoeid(final String city) {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                new NetUtils().get("https://query.yahooapis.com/v1/public/yql?q=" + URLEncoder.encode("select woeid from geo.places(1) where text=\"" + s + "\"") + "&format=" + URLEncoder.encode("json"), handler, 0, "woeid");
+                new NetUtils().get("https://query.yahooapis.com/v1/public/yql?q=" + URLEncoder.encode("select woeid from geo.places(1) where text=\"" + city + "\"") + "&format=" + URLEncoder.encode("json"), handler, 0, "woeid");
             }
         }).start();
     }
 
     //通过城市的woeid获取该城市天气
-    public void getWeather(final String s) {
+    public void getWeather(final String woeid) {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                new NetUtils().get("https://query.yahooapis.com/v1/public/yql?q=" + URLEncoder.encode("select * from weather.forecast where woeid=" + s + " and u=\"c\"") + "&format=" + URLEncoder.encode("json"), handler, 1, "weather");
+                new NetUtils().get("https://query.yahooapis.com/v1/public/yql?q=" + URLEncoder.encode("select * from weather.forecast where woeid=" + woeid + " and u=\"c\"") + "&format=" + URLEncoder.encode("json"), handler, 1, "weather");
             }
         }).start();
     }

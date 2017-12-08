@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather_master</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="default_area">--</string>
+    <string name="default_time">00:00</string>
+    <string name="default_date">default_date</string>
+    <string name="default_temp">--°</string>
+    <string name="default_weather">--</string>
+
+
+    <!-- format strings for clocks -->
+    <string name="clock_24_hours_format" translatable="false">kk&#58;mm</string>
+    <string name="main_widget_12_hours_format" translatable="false">h&#58;mm</string>
+
+    <string-array name="settings_array_notification_smallicon">
+        <item>天气状况</item>
+        <item>温度</item>
+    </string-array>
+    <string-array name="settings_array_notification_textcolor">
+        <item>系统默认</item>
+        <item>白色</item>
+        <item>黑色</item>
+    </string-array>
+</resources>

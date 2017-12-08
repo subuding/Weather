@@ -620,6 +620,22 @@ public class ApiManager {
 		public String toString() {
 			return city;
 		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+
+			Area area = (Area) o;
+
+			return city.equals(area.city);
+
+		}
+
+		@Override
+		public int hashCode() {
+			return city.hashCode();
+		}
 	}
 	public static String httpDoPost(String s){
 		Log.i("debug", "httpDoPost: "+s);

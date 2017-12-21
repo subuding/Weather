@@ -38,7 +38,7 @@ public class MainActivity extends FragmentActivity {
 	public  BaseFragment[] fragments;
 	private DynamicWeatherView weatherView;
 	private MxxViewPager viewPager;
-	private String area="[{\"city\":\"北京\"},{\"city\":\"石家庄\"},{\"city\":\"上海\"}]";
+	private String area="[{\"city\":\"北京\"},{\"city\":\"上海\"},{\"city\":\"广州\"}]";
 	public MxxViewPager getViewPager() {
 		return viewPager;
 	}
@@ -57,7 +57,7 @@ public class MainActivity extends FragmentActivity {
 		TimingLogger logger = new TimingLogger("MainActivity.onCreate");
 //		typeface = Typeface.createFromAsset(getAssets(), "fonts/clock text typeface.ttf");
 		if(typeface == null){
-			typeface = Typeface.createFromAsset(getAssets(), "fonts/mxx_font2.ttf");
+			typeface = Typeface.createFromAsset(getAssets(), "fonts/font2.ttf");
 		}
 		logger.addSplit("Typeface.createFromAsset");
 		setContentView(R.layout.activity_main);

@@ -256,10 +256,11 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
 								super.run();
 								String json=ApiManager.httpDoPostAre(manage_areas_search_edittext.getText().toString());
 								SeachCity seachCity=gson.fromJson(json, SeachCity.class);
-								seachCity.getHeWeather5().get(0).getStatus().equals("ok");
-								mSeachAreas=new ArrayList<Area>();
-								mSeachAreas.add(new Area(seachCity.getHeWeather5().get(0).getBasic().getCity()));
-								handler.sendEmptyMessage(1);
+								if(seachCity.getHeWeather5().get(0).getStatus().equals("ok")){
+									mSeachAreas=new ArrayList<Area>();
+									mSeachAreas.add(new Area(seachCity.getHeWeather5().get(0).getBasic().getCity()));
+									handler.sendEmptyMessage(1);
+								}
 							}
 						}.start();
 					}else{

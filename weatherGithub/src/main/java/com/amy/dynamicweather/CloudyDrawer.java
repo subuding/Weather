@@ -107,7 +107,7 @@ public class CloudyDrawer extends BaseDrawer {
 		 * @param screenWidth
 		 * @param drawableWidth
 		 * @param maxAlpha
-		 * @param canLoop是否可以循环移动
+		 * @param canLoop 是否可以循环移动
 		 *            （如果左边正好接上右边就设置为true)
 		 */
 		public CloudHolder(Drawable drawable, float percentWidthPerframe, float screenWidth, float drawableWidth,

@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
-public class MxxPreferenceUtil {
+public class PreferenceUtil {
 	
 	public static void setPrefString(Context context,final String preferencesName, final String key, final String value) {
         final SharedPreferences settings = context.getSharedPreferences(preferencesName, Context.MODE_PRIVATE);

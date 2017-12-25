@@ -6,7 +6,7 @@ import android.net.Network;
 import android.net.NetworkInfo;
 import android.os.Build;
 
-public class MxxNetworkUtil {
+public class NetworkUtil {
 	
 	/**
 	 * 检测网络是否可用
@@ -43,7 +43,6 @@ public class MxxNetworkUtil {
 	}
 	
 	/**
-	 * 王斌增加，用于判断是否是wifi 网络
 	 * 
 	 * @param context
 	 * @return 是否WIFI网络

@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.amy.android.util.MxxNetworkUtil;
+import com.amy.android.util.NetworkUtil;
 import com.amy.android.util.TimingLogger;
 import com.amy.android.util.UiUtil;
 import com.amy.dynamicweather.BaseDrawer;
@@ -122,7 +122,7 @@ public class WeatherFragment extends BaseFragment {
 					});
 				}
 			});
-			debug();
+//			debug();
 			if(mWeather != null){
 				updateWeatherUI();
 			}
@@ -187,7 +187,6 @@ public class WeatherFragment extends BaseFragment {
 	
 	private void debug(){
 		// DEBUG///////////////
-				if (WeatherApplication.DEBUG) {
 					mRootView.findViewById(R.id.w_WeatherLinearLayout).setOnClickListener(new View.OnClickListener() {
 						@Override
 						public void onClick(View v) {
@@ -216,14 +215,14 @@ public class WeatherFragment extends BaseFragment {
 							builder.create().show();
 						}
 					});
-				}
+
 	}
 
 	private void postRefresh() {
 		if (pullRefreshLayout != null) {
 			Activity activity = getActivity();
 			if(activity != null){
-				if(MxxNetworkUtil.isNetworkAvailable(activity))
+				if(NetworkUtil.isNetworkAvailable(activity))
 					pullRefreshLayout.postDelayed(new Runnable() {
 						@Override
 						public void run() {

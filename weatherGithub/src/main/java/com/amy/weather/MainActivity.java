@@ -18,7 +18,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 
-import com.amy.android.util.MxxPreferenceUtil;
+import com.amy.android.util.PreferenceUtil;
 import com.amy.android.util.TimingLogger;
 import com.amy.android.util.UiUtil;
 import com.amy.dynamicweather.DynamicWeatherView;
@@ -51,8 +51,8 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(MxxPreferenceUtil.getPrefString(this,"Areas","area",null)==null){
-			MxxPreferenceUtil.setPrefString(this,"Areas","area",area);
+		if(PreferenceUtil.getPrefString(this,"Areas","area",null)==null){
+			PreferenceUtil.setPrefString(this,"Areas","area",area);
 		}
 		TimingLogger logger = new TimingLogger("MainActivity.onCreate");
 //		typeface = Typeface.createFromAsset(getAssets(), "fonts/clock text typeface.ttf");

@@ -32,7 +32,7 @@ import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.google.gson.Gson;
-import com.amy.android.util.MxxPreferenceUtil;
+import com.amy.android.util.PreferenceUtil;
 import com.amy.android.util.UiUtil;
 import com.amy.dynamicweather.BaseDrawer.Type;
 import com.amy.support.widget.LabelSpinner;
@@ -221,7 +221,7 @@ public class SettingsFragment extends BaseFragment implements View.OnClickListen
 				break;
 			case R.id.manage_areas_ok_button:
 				String json=gson.toJson(areas);
-				MxxPreferenceUtil.setPrefString(getContext(),"Areas","area",json);
+				PreferenceUtil.setPrefString(getContext(),"Areas","area",json);
 				Toast.makeText(getContext(), "保存成功", Toast.LENGTH_SHORT).show();
 				popupWindow.dismiss();
 				MainActivity mainActivity= (MainActivity) getActivity();

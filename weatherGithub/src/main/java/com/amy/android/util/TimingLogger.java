@@ -2,8 +2,6 @@ package com.amy.android.util;
 
 import java.util.ArrayList;
 
-import com.amy.weather.WeatherApplication;
-
 import android.os.SystemClock;
 import android.util.Log;
 
@@ -44,7 +42,7 @@ public class TimingLogger {
     private String mLabel;
 
     /** Used to track whether Log.isLoggable was enabled at reset time. */
-    private boolean mDisabled = !WeatherApplication.DEBUG;
+    private boolean mDisabled = true;
 
     /** Stores the time of each split. */
     ArrayList<Long> mSplits;

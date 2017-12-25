@@ -233,10 +233,6 @@ public class DailyForecastView extends View {
 //		}
 		invalidate();
 	}
-//	private void toast(String msg){
-//		Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
-//	}
-
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);

@@ -22,10 +22,10 @@ import android.support.v4.os.AsyncTaskCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.amy.android.util.PreferenceUtil;
 import com.google.gson.Gson;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.amy.android.util.MxxPreferenceUtil;
 import com.amy.android.util.UiUtil;
 import com.amy.dynamicweather.BaseDrawer;
 import com.amy.dynamicweather.BaseDrawer.Type;
@@ -34,9 +34,6 @@ import com.amy.weather.api.entity.HeWeather6;
 @SuppressLint("SimpleDateFormat") @SuppressWarnings("deprecation")
 public class ApiManager {
 
-//	private static AreaData AREA_DATA;
-
-	static final String Url = "https://api.heweather.com/x3/weather?key=e80f9ffa350b4bfa9a85276076eea817&cityid=";
 	static final Gson GSON = new Gson();
 	static final String TAG = ApiManager.class.getSimpleName();
 
@@ -71,7 +68,7 @@ public class ApiManager {
 
 	public static ArrayList<Area> loadSelectedArea(Context context) {
 		ArrayList<Area> areas = new ArrayList<ApiManager.Area>();
-		String json =MxxPreferenceUtil.getPrefString(context,"Areas","area",null);
+		String json = PreferenceUtil.getPrefString(context,"Areas","area",null);
 		if (TextUtils.isEmpty(json)) {
 			return areas;
 		}
@@ -97,7 +94,7 @@ public class ApiManager {
 //			ArrayList<Area> oldAreas = loadSelectedArea(context);
 //			for (Area oldArea : oldAreas) {
 //				if (!areas.contains(oldArea)) {
-//					MxxPreferenceUtil.removePreference(context, oldArea.id);
+//					PreferenceUtil.removePreference(context, oldArea.id);
 //					Log.d(TAG, "removePreference->" + oldArea.name_cn + "@" + oldArea.id);
 //				}
 //			}
@@ -105,7 +102,7 @@ public class ApiManager {
 //			e.printStackTrace();
 //		}
 //		try {
-//			MxxPreferenceUtil.setPrefString(context, KEY_SELECTED_AREA, GSON.toJson(areas));
+//			PreferenceUtil.setPrefString(context, KEY_SELECTED_AREA, GSON.toJson(areas));
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
@@ -121,7 +118,7 @@ public class ApiManager {
 //	private static void setDefaultSelectedAreaId(Context context, Area area) {
 //		Log.d(TAG, "setDefaultSelectedAreaId->" + area.name_cn + "@" + area.id);
 //		try {
-//			MxxPreferenceUtil.setPrefString(context, KEY_DEFAULT_SELECTED_AREA_ID, area.id);
+//			PreferenceUtil.setPrefString(context, KEY_DEFAULT_SELECTED_AREA_ID, area.id);
 //			UpdateManager.sendUpdateWeather(context, loadDefaultSelectedAreaWeather(context));
 //		} catch (Exception e) {
 //			e.printStackTrace();
@@ -131,8 +128,8 @@ public class ApiManager {
 //	public static String getDefaultSelectedAreaId(@NonNull Context context) {
 //		Log.d(TAG,
 //				"getDefaultSelectedAreaId->"
-//						+ MxxPreferenceUtil.getPrefString(context, KEY_DEFAULT_SELECTED_AREA_ID, null));
-//		return MxxPreferenceUtil.getPrefString(context, KEY_DEFAULT_SELECTED_AREA_ID, null);
+//						+ PreferenceUtil.getPrefString(context, KEY_DEFAULT_SELECTED_AREA_ID, null));
+//		return PreferenceUtil.getPrefString(context, KEY_DEFAULT_SELECTED_AREA_ID, null);
 //	}
 
 	/**
@@ -260,7 +257,7 @@ public class ApiManager {
 //		try {
 //			final String key = weather.get().basic.id;
 //			UiUtil.logDebug(TAG, "saveWeater->" + key);
-//			MxxPreferenceUtil.setPrefString(context, key, weatherJson);
+//			PreferenceUtil.setPrefString(context, key, weatherJson);
 //			if (TextUtils.equals(key, getDefaultSelectedAreaId(context))) {
 //				// WeatherWidgetProvider.sendUpdateAppWidget(context, weather);
 //				UpdateManager.sendUpdateWeather(context, weather);
@@ -275,7 +272,7 @@ public class ApiManager {
 //			return null;
 //		}
 //		try {
-//			String json = MxxPreferenceUtil.getPrefString(context, areaId, null);
+//			String json = PreferenceUtil.getPrefString(context, areaId, null);
 //			if (TextUtils.isEmpty(json)) {
 //				return null;
 //			}
